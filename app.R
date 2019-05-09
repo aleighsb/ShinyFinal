@@ -12,23 +12,13 @@ library(memoise)
 #The Importance of Being Earnest by Oscar Wilde (844)
 #A Doll's House by Henrik Ibsen (2542)
 #A Tale of Two Cities by Charles Dickens (98)
-#Moby Dick by Herman Melville (2701)
-#Alice's Adventures in Wonderland by Lewis Carroll (11)
-#Notre-Dame de Paris by Victor Hugo (2610)
-#The Adventures of Sherlock Holmes by Sir Arthur Conan Doyle (1661)
-#Dracula by Bram Stoker (345)
 
 # The list of valid books
 books <<- list("Pride & Prejudice" = "austen",
                "Frankenstein" = "shelley",
                "The Importance of Being Earnest" = "wilde",
                "A Doll's House" = "ibsen",
-               "A Tale of Two Cities" = "dickens",
-               "Moby Dick" = "melville",
-               "Alice's Adventures in Wonderland" = "carroll",
-               "Notre-Dame de Paris" = "hugo",
-               "The Adventures of Sherlock Holmes" = "doyle",
-               "Dracula" = "stoker"
+               "A Tale of Two Cities" = "dickens"
                )
 
 # Using "memoise" to automatically cache the results
@@ -60,7 +50,7 @@ getTermMatrix <- memoise(function(book) {
 ## ui
 ui <- fluidPage(
   # Application title
-  titlePanel("Word Cloud: Top 10 Books on Project Gutenberg"),
+  titlePanel("Word Cloud: Top 5 Books on Project Gutenberg"),
   
   sidebarLayout(
     # Sidebar with a slider and selection inputs
